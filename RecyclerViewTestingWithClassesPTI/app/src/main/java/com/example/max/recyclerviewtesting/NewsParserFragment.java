@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 
 import com.google.gson.Gson;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -24,6 +26,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 
@@ -38,6 +42,7 @@ public class NewsParserFragment extends Fragment {
     MyRecyclerViewAdapter adapter;
     SharedPreferences sharedPreferences;
     Gson gson = new Gson();
+    JSONObject jsonObject = new JSONObject();
 
     public Elements content;
 
@@ -242,17 +247,23 @@ public class NewsParserFragment extends Fragment {
         }
     }
 
-//    void saveData(){
-//        sharedPreferences = getPreferences(MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//
-//        editor.commit();
-//
+
+//    String arrToJson(ArrayList<NewsElement> newsList){
+//        String result = gson.toJson(newsList);
+//        return result;
 //    }
 //
-//    void loadData(){
-//        sharedPreferences = getPreferences(MODE_PRIVATE);
-//
+//    ArrayList<NewsElement> jsonToArray(String source){
+//        ArrayList<NewsElement> result = new ArrayList<>();
+//        //result=gson.fromJson(source, ArrayList<NewsElement>().class);
+//        try {
+//            result= (ArrayList<NewsElement>) jsonObject.get(source);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        return result;
 //    }
+
+
 
 }
