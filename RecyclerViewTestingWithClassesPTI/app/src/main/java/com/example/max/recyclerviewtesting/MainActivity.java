@@ -35,11 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(savedInstanceState == null){
-            
+
             NewsParserFragment fragment = new NewsParserFragment();
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction().add(R.id.placeholder, fragment).commit();
-            Log.d("Main activity","вызван фрагмент");        }
+            //Log.d("Main activity","вызван фрагмент");
+        }
 
     }
 

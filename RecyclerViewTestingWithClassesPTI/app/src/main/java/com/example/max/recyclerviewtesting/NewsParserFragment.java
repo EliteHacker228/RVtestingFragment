@@ -64,7 +64,7 @@ public class NewsParserFragment extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         adapter = new MyRecyclerViewAdapter(view.getContext(), newsList);
         recyclerView.setAdapter(adapter);
-        return inflater.inflate(R.layout.fragment_news_parser, container, false);
+        return view;
     }
 
     public class NewThread extends AsyncTask<String, Void, String> {
